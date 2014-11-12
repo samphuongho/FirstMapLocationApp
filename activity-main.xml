@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.maplocation.MainActivity" >
+
+    <Button
+        android:id="@+id/btnCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:onClick="onClick_City"
+        android:text="City" />
+
+    <Button
+        android:id="@+id/btnUniv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnCity"
+        android:layout_alignBottom="@+id/btnCity"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick_CSULB"
+        android:text="University" />
+
+    <Button
+        android:id="@+id/btnECS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnUniv"
+        android:layout_alignBottom="@+id/btnUniv"
+        android:layout_alignParentRight="true"
+        android:onClick="onClick_ECS"
+        android:text="ECS" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_below="@+id/btnECS"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnUniv"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="CECS453 1st Map Assignment"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+</RelativeLayout>
